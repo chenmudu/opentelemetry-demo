@@ -41,51 +41,51 @@ const Header = () => {
   };
 
   return (
-    <S.Header>
-      <S.NavBar>
-        <S.Container>
-          <S.NavBarBrand href="/">
-            <S.BrandImg />
-          </S.NavBarBrand>
-          <S.Controls>
-            <S.AvatarContainer onClick={toggleDropdown}>
-              <S.Avatar src="/icons/user.png" alt="User" />
-              {isDropdownOpen && (
-                <S.Dropdown>
-                  {isAuthenticated ? (
-                    <>
-                      <S.DropdownItem>
-                        <Link href="/cart" onClick={() => setIsDropdownOpen(false)}>
-                          购物车
-                        </Link>
-                      </S.DropdownItem>
-                      <S.DropdownItem onClick={toggleCurrencySwitcher}>
-                        币种转换
-                      </S.DropdownItem>
-                      <S.DropdownItem onClick={handleLogout}>
-                        注销
-                      </S.DropdownItem>
-                      <S.DropdownItem onClick={handleOrdersClick}>
-                        订单
-                      </S.DropdownItem>
-                    </>
-                  ) : (
-                    <S.DropdownItem>
-                      <Link href="/login" onClick={() => setIsDropdownOpen(false)}>
-                        登录
-                      </Link>
-                    </S.DropdownItem>
-                  )}
-                </S.Dropdown>
+      <S.Header>
+        <S.NavBar>
+          <S.Container>
+            <S.NavBarBrand href="/">
+              <S.BrandImg />
+            </S.NavBarBrand>
+            <S.Controls>
+              <S.AvatarContainer onClick={toggleDropdown}>
+                <S.Avatar src="/icons/user.png" alt="User" />
+                {isDropdownOpen && (
+                    <S.Dropdown>
+                      {isAuthenticated ? (
+                          <>
+                            <S.DropdownItem>
+                              <Link href="/cart" onClick={() => setIsDropdownOpen(false)}>
+                                购物车
+                              </Link>
+                            </S.DropdownItem>
+                            <S.DropdownItem onClick={toggleCurrencySwitcher}>
+                              币种转换
+                            </S.DropdownItem>
+                            <S.DropdownItem onClick={handleOrdersClick}>
+                              订单
+                            </S.DropdownItem>
+                            <S.DropdownItem onClick={handleLogout}>
+                              注销
+                            </S.DropdownItem>
+                          </>
+                      ) : (
+                          <S.DropdownItem>
+                            <Link href="/login" onClick={() => setIsDropdownOpen(false)}>
+                              登录
+                            </Link>
+                          </S.DropdownItem>
+                      )}
+                    </S.Dropdown>
+                )}
+              </S.AvatarContainer>
+              {showCurrencySwitcher && (
+                  <CurrencySwitcher />
               )}
-            </S.AvatarContainer>
-            {showCurrencySwitcher && (
-              <CurrencySwitcher />
-            )}
-          </S.Controls>
-        </S.Container>
-      </S.NavBar>
-    </S.Header>
+            </S.Controls>
+          </S.Container>
+        </S.NavBar>
+      </S.Header>
   );
 };
 
