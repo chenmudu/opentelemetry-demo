@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
@@ -38,13 +38,14 @@ const OrdersPage = () => {
         <p>暂无订单数据，请稍后再试或联系管理员。</p>
       ) : (
         <ul>
-          {orders.map((order) => (
-            <li key={order.id}>
-              <Link href={`/orders/${order.id}`}>
-                <a>{`订单 #${order.id}`}</a>
-              </Link>
-            </li>
-          ))}
+          {/*{orders.map((order) => (*/}
+          {/*  <li key={order.id}>*/}
+          {/*    <Link href={`/orders/${order.id}`}>*/}
+          {/*      <a>{`订单 #${order.id}`}</a>*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*))}*/}
+          12345
         </ul>
       )}
     </div>

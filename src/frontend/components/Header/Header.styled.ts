@@ -54,9 +54,9 @@ export const Controls = styled.div`
   height: 60px;
 `;
 
-export const AvatarContainer = styled.div`  
-  position: relative;  
-  cursor: pointer;  
+export const AvatarContainer = styled.div`
+  position: relative;
+  cursor: pointer;
 `;
 
 export const Avatar = styled.img`  
